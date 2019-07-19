@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>users CRUD</title>
+  <style>
+    body {
+      background-image: url('https://image.freepik.com/free-vector/spot-light-background_1284-4685.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 94vh;
+    }
+
+    table label {
+      font-weight: bold;
+    }
+
+    table {
+      width: 500px;
+    }
+
+    table th {
+      text-align: left;
+    }
+
+    #edit-btn {
+      display: none;
+    }
+
+    .container {
+      width: 480px;
+      margin: 0 auto;
+    }
+  </style>
+  <script src="./javascript.js"></script>
+
+</head>
+
+<body onload="initApp()">
+
+  <div class="container">
+    <h2 align="center">Add User</h2>
+    <table>
+      <tr>
+        <td>
+          <label>
+            Enter First Name
+          </label>
+        </td>
+        <td>
+          <input type="text" id="firstName" placeholder="Enter first name">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label>
+            Enter Last Name
+          </label>
+        </td>
+        <td>
+          <input type="text" id="lastName" placeholder="Enter last name">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>
+            Enter Age
+          </label>
+        </td>
+        <td>
+          <input type="number" id="age" placeholder="Enter age">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>
+            Select Gender
+          </label>
+        </td>
+        <td>
+          <select id="gender" value="Male">
+            <option value="Male"> Male</option>
+            <option value="Female"> Female</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="submit" onclick="addUser()" value="Add User" id="add-btn">
+          <input type="submit" onclick="editUser()" value="Edit User" id="edit-btn">
+        </td>
+      </tr>
+    </table>
+
+    <h2 align="center">Users List</h2>
+
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th colspan="2">Actions</th>
+      </tr>
+      <tbody id="users">
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
