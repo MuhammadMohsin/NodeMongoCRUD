@@ -21,6 +21,6 @@ var db = mongoose.connection;
 db.on('open', () => console.log("MongoDB connected successfully!"));
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-app.use('/users', indexRouter);
+app.use('/students', indexRouter);
 
 module.exports = app;

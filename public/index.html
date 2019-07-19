@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>users CRUD</title>
+  <title>Student CRUD</title>
   <style>
     body {
       background-image: url('https://image.freepik.com/free-vector/spot-light-background_1284-4685.jpg');
@@ -40,7 +40,7 @@
 <body onload="initApp()">
 
   <div class="container">
-    <h2 align="center">Add User</h2>
+    <h2 align="center">Add Student</h2>
     <table>
       <tr>
         <td>
@@ -89,13 +89,13 @@
       <tr>
         <td></td>
         <td>
-          <input type="submit" onclick="addUser()" value="Add User" id="add-btn">
-          <input type="submit" onclick="editUser()" value="Edit User" id="edit-btn">
+          <input type="submit" onclick="addStudent()" value="Add Student" id="add-btn">
+          <input type="submit" onclick="editStudent()" value="Edit Student" id="edit-btn">
         </td>
       </tr>
     </table>
 
-    <h2 align="center">Users List</h2>
+    <h2 align="center">Student List</h2>
 
     <table>
       <tr>
@@ -105,7 +105,7 @@
         <th>Gender</th>
         <th colspan="2">Actions</th>
       </tr>
-      <tbody id="users">
+      <tbody id="students">
       </tbody>
     </table>
   </div>
