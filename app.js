@@ -3,7 +3,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
-var indexRouter = require('./routes/index');
 
 var app = express();
 
@@ -21,6 +20,7 @@ var db = mongoose.connection;
 db.on('open', () => console.log("MongoDB connected successfully!"));
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-app.use('/students', indexRouter);
+require('./routes')(app);
+
 
 module.exports = app;
